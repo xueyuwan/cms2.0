@@ -468,4 +468,158 @@
     }
 }
 
+/*登陆注册*/
+.user-container{
+    width: 100%;
+    height: 618px;
+    background: url("../images/banner_01.png") no-repeat;
+    background-size: cover;
+}
+.login-text h3{
+    margin-top: 30%;
+    color: #fff;
+    font-size: 36px;
+}
+.login-text p{
+    color: #fff;
+    font-size: 18px;
+    margin: 20px 0;
+}
+.login-box{
+    background: #fff;
+    margin-top: 30%;
+    width: 346px;
+}
+.login-box form{
+    padding: 0 24px 50px;
+}
+.login-box h3{
+    color: #666;
+    font-size:18px;
+    padding: 34px 0;
+}
+.login-box .input-group{
+    margin-bottom: 20px;
+}
+.login-box .login-btn{
+   margin-top: 60px;
+    background: #2c99ea;
+    color: #fff;
+}
+.register-box .register-btn{
+    background: #2c99ea;
+    color: #fff;
+}
 
+.login-box .link a{
+    color: #333;
+}
+.login-box .link input {
+}
+
+.register-box{
+    margin-top: 10%;
+    background: #fff;
+    padding: 35px 32px 50px;
+    width: 346px;
+}
+.register-box .input-group input{
+    margin-bottom: 16px;
+}
+.register-box h3{
+    font-size: 18px;
+    color: #333;
+
+}
+.register-box .link input{
+    display: inline-block;
+    width: 150px;
+     border: 1px solid #ccc;
+     height: 38px;
+    line-height: 38px;
+    text-indent: 14px;
+
+ }
+.register-box .link a{
+    border: 1px solid #ccc;
+    width:110px;
+    height: 38px;
+    display: block;
+}
+.register-box  .agree{
+    margin: 16px auto;
+    font-size: 12px;
+}
+.register-box  .agree a{
+    color: #4385f5;
+}
+@media screen and (max-width: 992px){
+    .login-text h3{
+        margin-top: 50px!important;
+        text-align: center;
+    }
+    .login-text p{
+        text-align: center;
+    }
+    .login-box{
+        margin-top: 80px;
+        margin: 0 auto;
+    }
+    .register-text{
+        display: none;
+    }
+    .register-box{
+        margin: 50px auto 0;
+    }
+}
+@media screen and (max-width: 768px){
+    .user-container{
+        height: 560px;
+    }
+    .login-text h3{
+        margin-top: 40px!important;
+        text-align: center;
+        font-size: 22px;
+    }
+    .login-text p{
+        text-align: center;
+        font-size: 16px;
+    }
+    .login-box{
+        margin: 50px auto 0;
+    }
+}
+@media screen and (max-width: 360px){
+    .login-box{
+        margin-top: 30px;
+        width: 326px
+    }
+    .register-box{
+        margin-top: 20px;
+        width: 326px
+    }
+    .login-box .link{
+        width: 100%;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 320px){
+    .login-box{
+        margin-top: 30px;
+        width: 290px
+    }
+    .register-box{
+        margin-top: 10px;
+        width: 290px;
+
+    }
+    .login-box .link{
+        width: 100%;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+    .register-box .link span{
+        width: 110px;
+    }
+}
