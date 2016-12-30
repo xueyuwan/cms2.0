@@ -14,6 +14,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/swiper.min.js"></script>
+    <script src="js/jquery.validate.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -67,20 +68,20 @@
                    </div>
                    <div class="col-md-5 col-sm-12">
                        <div class="register-box">
-                           <form action="">
+                           <form action="" method="post" id="signupForm">
                                <h3>账号注册</h3>
                                <div class="input-group">
-                                   <input type="text" class="form-control" placeholder="用户名">
-                                   <input type="text" class="form-control" placeholder="昵称">
-                                   <input type="text" class="form-control" placeholder="密码">
-                                   <input type="text" class="form-control" placeholder="邮箱">
+                                   <input type="text" id="username" name="username" class="form-control" placeholder="用户名">
+                                   <input type="text" id="nickname" name="nickname" class="form-control" placeholder="昵称">
+                                   <input type="text" id="password" name="password" class="form-control" placeholder="密码">
+                                   <input type="text" id="email" name="email" class="form-control" placeholder="邮箱">
                                </div>
                                <div class="clearfix">
                                    <div class="pull-left link" style="padding: 0;"> <input placeholder="请输入验证码"></div>
                                    <div class="pull-right link text-right"><a href="javascript:;"></a></div>
                                </div>
-                               <div class="agree"><input type="checkbox">我已经认真阅读并同意LvyeCMS的 <a href="">《使用协议》</a></div>
-                               <button type="button" class="btn btn-lg btn-block register-btn">注册</button>
+                               <div class="agree" id="agree"><input type="checkbox">我已经认真阅读并同意LvyeCMS的 <a href="">《使用协议》</a></div>
+                               <input  class="btn btn-lg btn-block register-btn" type="submit" value="提交">
                            </form>
                        </div>
                    </div>
@@ -135,4 +136,53 @@
    </div>
   </body>
 </html>
+<script type="text/javascript">
+//    $.validator.setDefaults({
+//        submitHandler: function() {
+//            alert("提交事件!");
+//        }
+//    });
+//    $("#signupForm").validate({
+//        submitHandler: function() {
+//            //验证通过后 的js代码写在这里
+//            alert("注册成功！");
+//        }
+//    })
+    $(document).ready(function(){
+        $("#signupForm").validate({
+            rules: {
+                username: {
+                    required: true,
+                    minlength: 2
+                },
+                nickname:"required",
+                password: {
+                    required: true,
+                    minlength: 5
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                agree: "required"
+            },
+            messages: {
+                username: {
+                    required: "请输入用户名",
+                    minlength: "用户名必需由两个字母组成"
+                },
+                nickname:"请输入昵称",
+                password: {
+                    required: "请输入密码",
+                    minlength: "密码长度不能小于 5 个字母"
+                },
+                email: "请输入一个正确的邮箱",
+                agree: "请接受我们的声明",
+            }
+        });
+
+    });
+</script>
+
+
 

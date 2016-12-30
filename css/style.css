@@ -500,6 +500,7 @@
 }
 .login-box .input-group{
     margin-bottom: 20px;
+    width: 100%;
 }
 .login-box .login-btn{
    margin-top: 60px;
@@ -524,7 +525,7 @@
     width: 346px;
 }
 .register-box .input-group input{
-    margin-bottom: 16px;
+    margin-bottom: 10px;
 }
 .register-box h3{
     font-size: 18px;
@@ -553,6 +554,12 @@
 .register-box  .agree a{
     color: #4385f5;
 }
+.register-box label{
+    width: 100%;
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: red;
+}
 @media screen and (max-width: 992px){
     .login-text h3{
         margin-top: 50px!important;
@@ -569,7 +576,7 @@
         display: none;
     }
     .register-box{
-        margin: 50px auto 0;
+        margin: 40px auto 0;
     }
 }
 @media screen and (max-width: 768px){
@@ -619,7 +626,79 @@
         text-align: left;
         margin-bottom: 10px;
     }
-    .register-box .link span{
+    .register-box .link input{
         width: 110px;
     }
+}
+
+/*服务帮助*/
+.help-box .box-left h3{
+    border-left: 2px solid #fff;
+    text-indent: 10px;
+}
+.help-box .box-left h3.actived{
+    border-left: 2px solid #2c99ea;
+}
+.help-box .box-left h3 a{
+
+    color: #2c99ea;
+    font-size: 18px;
+
+}
+.help-box .box-left ul li{
+    font-size: 12px;
+    color: #999999;
+    margin-bottom: 10px;
+    text-indent: 36px;
+}
+.help-box .box-left ul li a{
+    font-size: 14px;
+    color: #2c99ea;
+
+}
+.help-box .box-left ul li span{
+    text-indent: 36px;
+    display: block;
+}
+.help-box .box-right h3{
+    border-bottom: 1px dashed #ddd;
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+.help-box .box-right h3 a{
+    color: #666;
+    font-size: 16px;
+    font-weight: normal;
+
+}
+.help-box .box-right h3 span{
+    display:inline-block;
+    width: 50%;
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+}
+.help-box .box-right p{
+    color: #666;
+    font-size: 14px;
+}
+
+.help-box .box-right h5{
+    color: #666;
+    font-size: 14px;
+    margin: 30px 0;
+}
+.help-box .box-right ul{
+    margin-bottom: 50px;
+}
+.help-box .box-right ul li{
+    font-size: 18px;
+    color: #666;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.help-box .box-right ul li a{
+    color:#2c99ea;
 }
